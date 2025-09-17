@@ -5,9 +5,9 @@ function adicionarAmigo() {
 
     if (novoAmigo.value == "") {
         alert("Escreva um nome para adicionar");
+    } else {
+        amigos.push(novoAmigo);
     }
-
-    amigos.push(novoAmigo);
 
     limparCampo();
     atualizarLista();
@@ -30,3 +30,6 @@ function limparCampo() {
     chute.value = '';
 }
 
+function sortearAmigo() {
+    
+}
