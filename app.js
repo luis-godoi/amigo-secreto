@@ -20,7 +20,7 @@ function atualizarLista() {
 
     for (let i = 0; i < amigos.length; i++) {
     let item = document.createElement("li"); 
-    item.textContent = amigos[i]; 
+    item.textContent = `${i+1}. ${amigos[i]}`; 
     lista.appendChild(item); 
     }
 }
@@ -41,3 +41,9 @@ function sortearAmigo() {
         nomeDoSorteado.innerHTML = `A pessoa sorteada foi: ${amigoSorteado}`;
     }
 }
+
+document.getElementById("amigo").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      adicionarAmigo();
+    }
+  });
