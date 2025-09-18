@@ -31,5 +31,13 @@ function limparCampo() {
 }
 
 function sortearAmigo() {
-    
+    if (amigos.lengh === 0) {
+        alert("Adicione um amigo antes de sortear");
+    } else {
+        let numeroSorteado = Math.floor(Math.random() * amigos.length);
+        let amigoSorteado = amigos[numeroSorteado];
+
+        let nomeDoSorteado = document.getElementById('resultado');
+        nomeDoSorteado.innerHTML = `A pessoa sorteada foi: ${amigoSorteado}`;
+    }
 }
